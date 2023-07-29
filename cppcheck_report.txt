@@ -1,0 +1,623 @@
+py/python_ops.c:73:6: style: Unused variable: ret [unusedVariable]
+ int ret;
+     ^
+src/spiffs_cache.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 21 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/spiffs_check.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 24 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/spiffs_check.c:895:13: style: Variable 'res' is assigned a value that is never used. [unreadVariable]
+  s32_t res = SPIFFS_OK;
+            ^
+src/spiffs_gc.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 24 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/spiffs_gc.c:238:23: style:inconclusive: Function 'spiffs_gc_find_candidate' argument 2 names different: declaration 'block_candidate' definition 'block_candidates'. [funcArgNamesDifferent]
+    spiffs_block_ix **block_candidates,
+                      ^
+src/spiffs_nucleus.h:755:23: note: Function 'spiffs_gc_find_candidate' argument 2 names different: declaration 'block_candidate' definition 'block_candidates'.
+    spiffs_block_ix **block_candidate,
+                      ^
+src/spiffs_gc.c:238:23: note: Function 'spiffs_gc_find_candidate' argument 2 names different: declaration 'block_candidate' definition 'block_candidates'.
+    spiffs_block_ix **block_candidates,
+                      ^
+src/spiffs_hydrogen.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 27 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/spiffs_hydrogen.c:112:5: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+    cache = cache_8;
+    ^
+src/spiffs_hydrogen.c:1155:7: style: Variable 'res' is reassigned a value before the old one has been used. [redundantAssignment]
+  res = spiffs_object_index_consistency_check(fs);
+      ^
+src/spiffs_hydrogen.c:1153:7: note: res is assigned
+  res = spiffs_lookup_consistency_check(fs, 0);
+      ^
+src/spiffs_hydrogen.c:1155:7: note: res is overwritten
+  res = spiffs_object_index_consistency_check(fs);
+      ^
+src/spiffs_hydrogen.c:1157:7: style: Variable 'res' is reassigned a value before the old one has been used. [redundantAssignment]
+  res = spiffs_page_consistency_check(fs);
+      ^
+src/spiffs_hydrogen.c:1155:7: note: res is assigned
+  res = spiffs_object_index_consistency_check(fs);
+      ^
+src/spiffs_hydrogen.c:1157:7: note: res is overwritten
+  res = spiffs_page_consistency_check(fs);
+      ^
+src/spiffs_hydrogen.c:1159:7: style: Variable 'res' is reassigned a value before the old one has been used. [redundantAssignment]
+  res = spiffs_obj_lu_scan(fs);
+      ^
+src/spiffs_hydrogen.c:1157:7: note: res is assigned
+  res = spiffs_page_consistency_check(fs);
+      ^
+src/spiffs_hydrogen.c:1159:7: note: res is overwritten
+  res = spiffs_obj_lu_scan(fs);
+      ^
+src/spiffs_hydrogen.c:914:45: style:inconclusive: Function 'SPIFFS_rename' argument 2 names different: declaration 'old' definition 'old_path'. [funcArgNamesDifferent]
+s32_t SPIFFS_rename(spiffs *fs, const char *old_path, const char *new_path) {
+                                            ^
+src/spiffs.h:544:45: note: Function 'SPIFFS_rename' argument 2 names different: declaration 'old' definition 'old_path'.
+s32_t SPIFFS_rename(spiffs *fs, const char *old, const char *newPath);
+                                            ^
+src/spiffs_hydrogen.c:914:45: note: Function 'SPIFFS_rename' argument 2 names different: declaration 'old' definition 'old_path'.
+s32_t SPIFFS_rename(spiffs *fs, const char *old_path, const char *new_path) {
+                                            ^
+src/spiffs_hydrogen.c:914:67: style:inconclusive: Function 'SPIFFS_rename' argument 3 names different: declaration 'newPath' definition 'new_path'. [funcArgNamesDifferent]
+s32_t SPIFFS_rename(spiffs *fs, const char *old_path, const char *new_path) {
+                                                                  ^
+src/spiffs.h:544:62: note: Function 'SPIFFS_rename' argument 3 names different: declaration 'newPath' definition 'new_path'.
+s32_t SPIFFS_rename(spiffs *fs, const char *old, const char *newPath);
+                                                             ^
+src/spiffs_hydrogen.c:914:67: note: Function 'SPIFFS_rename' argument 3 names different: declaration 'newPath' definition 'new_path'.
+s32_t SPIFFS_rename(spiffs *fs, const char *old_path, const char *new_path) {
+                                                                  ^
+src/spiffs_hydrogen.c:112:11: style: Variable 'cache' is assigned a value that is never used. [unreadVariable]
+    cache = cache_8;
+          ^
+src/spiffs_hydrogen.c:437:13: style: Variable 'res' is assigned a value that is never used. [unreadVariable]
+  s32_t res = SPIFFS_OK;
+            ^
+src/spiffs_nucleus.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 33 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/spiffs_nucleus.c:1619:9: style: Variable 'res' is reassigned a value before the old one has been used. [redundantAssignment]
+    res = spiffs_page_delete(fs, orig_data_pix);
+        ^
+src/spiffs_nucleus.c:1572:11: note: res is assigned
+      res = spiffs_page_allocate_data(fs, fd->obj_id & ~SPIFFS_OBJ_ID_IX_FLAG,
+          ^
+src/spiffs_nucleus.c:1619:9: note: res is overwritten
+    res = spiffs_page_delete(fs, orig_data_pix);
+        ^
+src/spiffs_nucleus.c:1057:19: style:inconclusive: Function 'spiffs_cb_object_event' argument 4 names different: declaration 'obj_id' definition 'obj_id_raw'. [funcArgNamesDifferent]
+    spiffs_obj_id obj_id_raw,
+                  ^
+src/spiffs_nucleus.h:696:19: note: Function 'spiffs_cb_object_event' argument 4 names different: declaration 'obj_id' definition 'obj_id_raw'.
+    spiffs_obj_id obj_id,
+                  ^
+src/spiffs_nucleus.c:1057:19: note: Function 'spiffs_cb_object_event' argument 4 names different: declaration 'obj_id' definition 'obj_id_raw'.
+    spiffs_obj_id obj_id_raw,
+                  ^
+src/spiffs_nucleus.c:1169:16: style:inconclusive: Function 'spiffs_object_open_by_id' argument 3 names different: declaration 'f' definition 'fd'. [funcArgNamesDifferent]
+    spiffs_fd *fd,
+               ^
+src/spiffs_nucleus.h:704:16: note: Function 'spiffs_object_open_by_id' argument 3 names different: declaration 'f' definition 'fd'.
+    spiffs_fd *f,
+               ^
+src/spiffs_nucleus.c:1169:16: note: Function 'spiffs_object_open_by_id' argument 3 names different: declaration 'f' definition 'fd'.
+    spiffs_fd *fd,
+               ^
+src/spiffs_nucleus.c:1187:16: style:inconclusive: Function 'spiffs_object_open_by_page' argument 3 names different: declaration 'f' definition 'fd'. [funcArgNamesDifferent]
+    spiffs_fd *fd,
+               ^
+src/spiffs_nucleus.h:711:16: note: Function 'spiffs_object_open_by_page' argument 3 names different: declaration 'f' definition 'fd'.
+    spiffs_fd *f,
+               ^
+src/spiffs_nucleus.c:1187:16: note: Function 'spiffs_object_open_by_page' argument 3 names different: declaration 'f' definition 'fd'.
+    spiffs_fd *fd,
+               ^
+src/spiffs_nucleus.c:1741:11: style:inconclusive: Function 'spiffs_object_truncate' argument 2 names different: declaration 'new_len' definition 'new_size'. [funcArgNamesDifferent]
+    u32_t new_size,
+          ^
+src/spiffs_nucleus.h:735:11: note: Function 'spiffs_object_truncate' argument 2 names different: declaration 'new_len' definition 'new_size'.
+    u32_t new_len,
+          ^
+src/spiffs_nucleus.c:1741:11: note: Function 'spiffs_object_truncate' argument 2 names different: declaration 'new_len' definition 'new_size'.
+    u32_t new_size,
+          ^
+src/spiffs_nucleus.c:1742:10: style:inconclusive: Function 'spiffs_object_truncate' argument 3 names different: declaration 'remove_object' definition 'remove_full'. [funcArgNamesDifferent]
+    u8_t remove_full) {
+         ^
+src/spiffs_nucleus.h:736:10: note: Function 'spiffs_object_truncate' argument 3 names different: declaration 'remove_object' definition 'remove_full'.
+    u8_t remove_object);
+         ^
+src/spiffs_nucleus.c:1742:10: note: Function 'spiffs_object_truncate' argument 3 names different: declaration 'remove_object' definition 'remove_full'.
+    u8_t remove_full) {
+         ^
+src/test/test_bugreports.c:260:7: style: Variable 'res' is reassigned a value before the old one has been used. [redundantAssignment]
+  res = SPIFFS_write(FS, fd, buf, 500);
+      ^
+src/test/test_bugreports.c:257:7: note: res is assigned
+  res = SPIFFS_OK;
+      ^
+src/test/test_bugreports.c:260:7: note: res is overwritten
+  res = SPIFFS_write(FS, fd, buf, 500);
+      ^
+src/test/test_bugreports.c:681:15: style: Variable 'fd[fdn]' is reassigned a value before the old one has been used. [redundantAssignment]
+      fd[fdn] = SPIFFS_open(FS, filename[(arg>>3) & 7], modes[arg & 7], 0);
+              ^
+src/test/test_bugreports.c:665:17: note: fd[fdn] is assigned
+        fd[fdn] = -1;
+                ^
+src/test/test_bugreports.c:681:15: note: fd[fdn] is overwritten
+      fd[fdn] = SPIFFS_open(FS, filename[(arg>>3) & 7], modes[arg & 7], 0);
+              ^
+src/test/test_bugreports.c:93:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:172:3: style: Label '__fail_assert' is not used. There is #if in function body so the label might be used in code that is removed by the preprocessor. [unusedLabelConfiguration]
+} TEST_END
+  ^
+src/test/test_bugreports.c:242:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:284:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:337:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:386:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:433:3: style: Label '__fail_assert' is not used. There is #if in function body so the label might be used in code that is removed by the preprocessor. [unusedLabelConfiguration]
+} TEST_END
+  ^
+src/test/test_bugreports.c:502:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:547:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:600:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:840:3: style: Label '__fail_stop' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:840:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:844:3: style: Label '__fail_stop' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:844:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:848:3: style: Label '__fail_stop' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:848:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:859:3: style: Label '__fail_stop' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:859:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:863:3: style: Label '__fail_stop' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:863:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:870:3: style: Label '__fail_stop' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:870:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:877:3: style: Label '__fail_stop' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:877:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:884:3: style: Label '__fail_stop' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:884:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:975:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:1054:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:1160:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:1176:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:1200:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:1231:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_bugreports.c:1248:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_bugreports.c:606:7: style: Local variable 'setup' shadows outer function [shadowFunction]
+  int setup = fgetc(f);
+      ^
+src/test/test_bugreports.c:29:13: note: Shadowed declaration
+static void setup() {
+            ^
+src/test/test_bugreports.c:606:7: note: Shadow variable
+  int setup = fgetc(f);
+      ^
+src/test/test_bugreports.c:1011:9: style: Local variable 'i' shadows outer variable [shadowVariable]
+    int i;
+        ^
+src/test/test_bugreports.c:983:7: note: Shadowed declaration
+  int i;
+      ^
+src/test/test_bugreports.c:1011:9: note: Shadow variable
+    int i;
+        ^
+src/test/test_bugreports.c:616:7: style: Unused variable: res [unusedVariable]
+  int res;
+      ^
+src/test/test_bugreports.c:979:15: style: Unused variable: fd [unusedVariable]
+  spiffs_file fd;
+              ^
+src/test/test_bugreports.c:1120:7: style: Unused variable: res [unusedVariable]
+  int res;
+      ^
+src/test/test_bugreports.c:1164:7: style: Unused variable: res [unusedVariable]
+  int res;
+      ^
+src/test/test_bugreports.c:1180:7: style: Unused variable: res [unusedVariable]
+  int res;
+      ^
+src/test/test_check.c:49:7: style: Redundant initialization for 'res'. The initialized value is overwritten before it is read. [redundantInitialization]
+  res = test_create_and_write_file("file2", size, size);
+      ^
+src/test/test_check.c:40:11: note: res is initialized
+  int res = test_create_and_write_file("file", size, size);
+          ^
+src/test/test_check.c:49:7: note: res is overwritten
+  res = test_create_and_write_file("file2", size, size);
+      ^
+src/test/test_check.c:53:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_check.c:90:3: style: Label '__fail_assert' is not used. There is #if in function body so the label might be used in code that is removed by the preprocessor. [unusedLabelConfiguration]
+} TEST_END
+  ^
+src/test/test_check.c:130:3: style: Label '__fail_assert' is not used. There is #if in function body so the label might be used in code that is removed by the preprocessor. [unusedLabelConfiguration]
+} TEST_END
+  ^
+src/test/test_check.c:175:3: style: Label '__fail_assert' is not used. There is #if in function body so the label might be used in code that is removed by the preprocessor. [unusedLabelConfiguration]
+} TEST_END
+  ^
+src/test/test_check.c:216:3: style: Label '__fail_assert' is not used. There is #if in function body so the label might be used in code that is removed by the preprocessor. [unusedLabelConfiguration]
+} TEST_END
+  ^
+src/test/test_check.c:257:3: style: Label '__fail_assert' is not used. There is #if in function body so the label might be used in code that is removed by the preprocessor. [unusedLabelConfiguration]
+} TEST_END
+  ^
+src/test/test_check.c:298:3: style: Label '__fail_assert' is not used. There is #if in function body so the label might be used in code that is removed by the preprocessor. [unusedLabelConfiguration]
+} TEST_END
+  ^
+src/test/test_check.c:338:3: style: Label '__fail_assert' is not used. There is #if in function body so the label might be used in code that is removed by the preprocessor. [unusedLabelConfiguration]
+} TEST_END
+  ^
+src/test/test_check.c:379:3: style: Label '__fail_assert' is not used. There is #if in function body so the label might be used in code that is removed by the preprocessor. [unusedLabelConfiguration]
+} TEST_END
+  ^
+src/test/test_check.c:414:3: style: Label '__fail_assert' is not used. There is #if in function body so the label might be used in code that is removed by the preprocessor. [unusedLabelConfiguration]
+} TEST_END
+  ^
+src/test/test_dev.c:118:3: style: Label '__fail_assert' is not used. There is #if in function body so the label might be used in code that is removed by the preprocessor. [unusedLabelConfiguration]
+} TEST_END
+  ^
+src/test/test_hydrogen.c:36:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:168:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:200:1: style: Label '__fail_assert' is not used. There is #if in function body so the label might be used in code that is removed by the preprocessor. [unusedLabelConfiguration]
+TEST_END
+^
+src/test/test_hydrogen.c:235:1: style: Label '__fail_assert' is not used. There is #if in function body so the label might be used in code that is removed by the preprocessor. [unusedLabelConfiguration]
+TEST_END
+^
+src/test/test_hydrogen.c:269:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:304:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:328:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:341:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:361:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:449:1: style: Label '__fail_assert' is not used. There is #if in function body so the label might be used in code that is removed by the preprocessor. [unusedLabelConfiguration]
+TEST_END
+^
+src/test/test_hydrogen.c:504:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_hydrogen.c:568:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_hydrogen.c:617:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_hydrogen.c:693:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_hydrogen.c:724:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_hydrogen.c:750:3: style: Label '__fail_assert' is not used. [unusedLabel]
+} TEST_END
+  ^
+src/test/test_hydrogen.c:814:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:834:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:868:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:882:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:906:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:920:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:944:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:958:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:982:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:1005:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:1065:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:1108:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:1154:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:1229:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:1282:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:1291:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:1300:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:1309:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:1351:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:1393:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:1430:3: style: Label '__fail_assert' is not used. There is #if in function body so the label might be used in code that is removed by the preprocessor. [unusedLabelConfiguration]
+} TEST_END
+  ^
+src/test/test_hydrogen.c:1467:3: style: Label '__fail_assert' is not used. There is #if in function body so the label might be used in code that is removed by the preprocessor. [unusedLabelConfiguration]
+} TEST_END
+  ^
+src/test/test_hydrogen.c:1506:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:1545:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:1588:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:1649:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:1676:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:1748:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:1760:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:1783:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:1796:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:1819:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:1861:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:1902:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:2046:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:2090:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:1383:12: style: Unused variable: dst [unusedVariable]
+      u8_t dst;
+           ^
+src/test/test_hydrogen.c:393:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:2214:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:2320:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:2382:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:2488:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:193:0: information: Skipping configuration 'SPIFFS_OBJ_META_LEN' since the value of 'SPIFFS_OBJ_META_LEN' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  u8_t new_meta[SPIFFS_OBJ_META_LEN] = {0};
+^
+src/test/test_hydrogen.c:228:0: information: Skipping configuration 'SPIFFS_OBJ_META_LEN' since the value of 'SPIFFS_OBJ_META_LEN' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  u8_t new_meta[SPIFFS_OBJ_META_LEN] = {0};
+^
+src/test/test_hydrogen.c:438:0: information: Skipping configuration 'SPIFFS_OBJ_META_LEN' since the value of 'SPIFFS_OBJ_META_LEN' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+      TEST_CHECK_EQ(memcmp(pe->meta, s.meta, SPIFFS_OBJ_META_LEN), 0);
+^
+src/test/test_hydrogen.c:756:0: information: Skipping configuration 'SPIFFS_OBJ_META_LEN' since the value of 'SPIFFS_OBJ_META_LEN' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  u8_t new_meta[SPIFFS_OBJ_META_LEN], new_meta2[SPIFFS_OBJ_META_LEN];
+^
+src/test/test_hydrogen.c:761:0: information: Skipping configuration 'SPIFFS_OBJ_META_LEN' since the value of 'SPIFFS_OBJ_META_LEN' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  for (i = 0; i < SPIFFS_OBJ_META_LEN; i++) {
+^
+src/test/test_hydrogen.c:769:0: information: Skipping configuration 'SPIFFS_OBJ_META_LEN' since the value of 'SPIFFS_OBJ_META_LEN' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  TEST_CHECK_EQ(memcmp(s.meta, new_meta, SPIFFS_OBJ_META_LEN), 0);
+^
+src/test/test_hydrogen.c:771:0: information: Skipping configuration 'SPIFFS_OBJ_META_LEN' since the value of 'SPIFFS_OBJ_META_LEN' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  for (i = 0; i < SPIFFS_OBJ_META_LEN; i++) {
+^
+src/test/test_hydrogen.c:784:0: information: Skipping configuration 'SPIFFS_OBJ_META_LEN' since the value of 'SPIFFS_OBJ_META_LEN' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  TEST_CHECK_EQ(memcmp(s.meta, new_meta, SPIFFS_OBJ_META_LEN), 0);
+^
+src/test/test_hydrogen.c:794:0: information: Skipping configuration 'SPIFFS_OBJ_META_LEN' since the value of 'SPIFFS_OBJ_META_LEN' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  TEST_CHECK_EQ(memcmp(s.meta, new_meta2, SPIFFS_OBJ_META_LEN), 0);
+^
+src/test/test_hydrogen.c:55:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:81:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_hydrogen.c:154:1: style: Label '__fail_assert' is not used. [unusedLabel]
+TEST_END
+^
+src/test/test_spiffs.c:209:7: warning: %d in format string (no. 4) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+      printf("trying to write %02x to %02x at addr %08x (as part of writing %d bytes to addr %08x)\n", src[i], AREA(addr + i), addr+i, size, addr);
+      ^
+src/test/test_spiffs.c:366:3: warning: %i in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  printf("  RD: %10i reads  %10i bytes %10i avg bytes/read\n", reads, bytes_rd, reads == 0 ? 0 : (bytes_rd / reads));
+  ^
+src/test/test_spiffs.c:366:3: warning: %i in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  printf("  RD: %10i reads  %10i bytes %10i avg bytes/read\n", reads, bytes_rd, reads == 0 ? 0 : (bytes_rd / reads));
+  ^
+src/test/test_spiffs.c:366:3: warning: %i in format string (no. 3) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  printf("  RD: %10i reads  %10i bytes %10i avg bytes/read\n", reads, bytes_rd, reads == 0 ? 0 : (bytes_rd / reads));
+  ^
+src/test/test_spiffs.c:367:3: warning: %i in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  printf("  WR: %10i writes %10i bytes %10i avg bytes/write\n", writes, bytes_wr, writes == 0 ? 0 : (bytes_wr / writes));
+  ^
+src/test/test_spiffs.c:367:3: warning: %i in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  printf("  WR: %10i writes %10i bytes %10i avg bytes/write\n", writes, bytes_wr, writes == 0 ? 0 : (bytes_wr / writes));
+  ^
+src/test/test_spiffs.c:367:3: warning: %i in format string (no. 3) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  printf("  WR: %10i writes %10i bytes %10i avg bytes/write\n", writes, bytes_wr, writes == 0 ? 0 : (bytes_wr / writes));
+  ^
+src/test/test_spiffs.c:407:7: warning: %i in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+      printf("ERROR %i", arg1);
+      ^
+src/test/test_spiffs.c:945:3: warning: %i in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  printf("  locks : %i\n", _fs_locks);
+  ^
+src/test/test_spiffs.c:129:18: style: The scope of the variable 'ep' can be reduced. [variableScope]
+  struct dirent *ep;
+                 ^
+src/test/test_spiffs.c:921:3: warning: %i in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  printf("  cache hits      : %i (sum %i)\n", (FS)->cache_hits, chits_tot);
+  ^
+src/test/test_spiffs.c:922:3: warning: %i in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+  printf("  cache misses    : %i (sum %i)\n", (FS)->cache_misses, cmiss_tot);
+  ^
+src/test/test_spiffs.c:744:0: information: Skipping configuration 'SPIFFS_OBJ_META_LEN' since the value of 'SPIFFS_OBJ_META_LEN' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    for (i = 0; i < SPIFFS_OBJ_META_LEN; i++) {
+^
+src/spiffs_hydrogen.c:20:0: style: The function 'SPIFFS_buffer_bytes_for_cache' is never used. [unusedFunction]
+
+^
+src/spiffs_hydrogen.c:16:0: style: The function 'SPIFFS_buffer_bytes_for_filedescs' is never used. [unusedFunction]
+
+^
+src/spiffs_hydrogen.c:26:0: style: The function 'SPIFFS_mounted' is never used. [unusedFunction]
+
+^
+src/test/test_bugreports.c:886:0: style: The function '__test_small_free_space' is never used. [unusedFunction]
+
+^
+src/test/test_dev.c:120:0: style: The function '_add_suite_tests_dev_tests' is never used. [unusedFunction]
+
+^
+src/test/test_spiffs.c:239:0: style: The function 'hexdump_mem' is never used. [unusedFunction]
+
+^
+src/test/test_spiffs.c:612:0: style: The function 'invoke_error_after_read_bytes' is never used. [unusedFunction]
+
+^
+py/python_ops.c:65:0: style: The function 'my_dir' is never used. [unusedFunction]
+
+^
+py/python_ops.c:6:0: style: The function 'my_spiffs_mount' is never used. [unusedFunction]
+
+^
+py/python_ops.c:54:0: style: The function 'my_spiffs_umount' is never used. [unusedFunction]
+
+^
+src/test/test_spiffs.c:591:0: style: The function 'set_flash_ops_log' is never used. [unusedFunction]
+
+^
+src/spiffs_nucleus.c:1166:0: style: The function 'spiffs_object_open_by_id' is never used. [unusedFunction]
+
+^
+src/test/test_spiffs.c:429:0: style: The function 'test_lock' is never used. [unusedFunction]
+
+^
+src/test/test_spiffs.c:438:0: style: The function 'test_unlock' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
